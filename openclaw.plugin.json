@@ -1,0 +1,214 @@
+{
+  "id": "dataforseo",
+  "name": "DataForSEO",
+  "description": "Search the complete DataForSEO catalogue, load fields on demand, run APIs, resume tasks, and read complete saved results and purchased databases.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "login": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "source",
+              "provider",
+              "id"
+            ],
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "password": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "source",
+              "provider",
+              "id"
+            ],
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "passwordBase64": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "source",
+              "provider",
+              "id"
+            ],
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "authBase64": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "source",
+              "provider",
+              "id"
+            ],
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "dailyCapUsd": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Daily total DataForSEO account spending cap in USD. Default 0 disables paid calls. A final request can exceed the cap."
+      },
+      "dataDirectory": {
+        "type": "string",
+        "description": "Private directory for complete responses and job records. Default ~/.openclaw/dataforseo. No automatic expiry."
+      },
+      "sandbox": {
+        "type": "boolean",
+        "description": "Use free provider sandbox fixtures. Default false."
+      },
+      "requestTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 600000
+      },
+      "workflowTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 3600000
+      },
+      "pollIntervalMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 60000
+      },
+      "importRoots": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Directories agents may import purchased database files from. Default [] disables file imports."
+      }
+    },
+    "additionalProperties": false
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configContracts": {
+    "secretInputs": {
+      "paths": [
+        {
+          "path": "login",
+          "expected": "string"
+        },
+        {
+          "path": "password",
+          "expected": "string"
+        },
+        {
+          "path": "passwordBase64",
+          "expected": "string"
+        },
+        {
+          "path": "authBase64",
+          "expected": "string"
+        }
+      ]
+    }
+  },
+  "uiHints": {
+    "login": {
+      "label": "DataForSEO API login",
+      "sensitive": true
+    },
+    "password": {
+      "label": "DataForSEO API password",
+      "sensitive": true
+    },
+    "passwordBase64": {
+      "label": "Base64-encoded API password",
+      "sensitive": true
+    },
+    "authBase64": {
+      "label": "Base64-encoded login:password",
+      "sensitive": true
+    },
+    "dailyCapUsd": {
+      "label": "Daily account spending cap (USD)"
+    },
+    "importRoots": {
+      "label": "Database import directories"
+    }
+  },
+  "skills": [
+    "./skills"
+  ],
+  "contracts": {
+    "tools": [
+      "dataforseo_catalogue",
+      "dataforseo_schema",
+      "dataforseo_request",
+      "dataforseo_results",
+      "dataforseo_jobs",
+      "dataforseo_budget",
+      "dataforseo_databases"
+    ]
+  }
+}

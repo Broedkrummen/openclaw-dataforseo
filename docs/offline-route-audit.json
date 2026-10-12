@@ -1,0 +1,451 @@
+{
+  "endpoints": 43,
+  "passed": 43,
+  "mockedRequests": 105,
+  "realNetworkCalls": 0,
+  "paidCalls": 0,
+  "checks": [
+    {
+      "id": "POST /v3/serp/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/youtube/video_info/tasks_fixed",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/youtube/video_subtitles/tasks_fixed",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/youtube/video_comments/tasks_fixed",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/seznam/organic/tasks_fixed",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/dataforseo_labs/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/domain_analytics/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/keywords_data/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/dataforseo_trends/locations/{country}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/backlinks/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/ai_optimization/claude/llm_responses/live",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": false,
+      "paidDefaultBlocked": true,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/on_page/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/on_page/lighthouse/task_get/json/{id}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/content_analysis/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/merchant/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/merchant/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/merchant/google/sellers/ad_url/{shop_ad_aclk}",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": false,
+      "paidDefaultBlocked": true,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/app_data/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/app_data/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/business_data/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/business_data/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/business_data/tripadvisor/locations",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/business_data/tripadvisor/locations/{country}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/business_data/tripadvisor/languages",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/appendix/status",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/ai_optimization/id_list",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "POST /v3/dataforseo_labs/keyword_ideas/live",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": false,
+      "paidDefaultBlocked": true,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/endpoints",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/google/ad_traffic_by_keywords/task_get/{id}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/google/ad_traffic_by_keywords/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/google/ad_traffic_by_platforms/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/google/adwords_status",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/google/categories",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/keywords_data/google/keywords_for_category/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/merchant/google/reviews/task_get/advanced/{id}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/reviews/google/languages",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/reviews/google/locations",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/reviews/google/task_get/{id}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/reviews/google/tasks_ready",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/endpoints",
+      "formatsVerified": [
+        "json"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/google/jobs/locations",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    },
+    {
+      "id": "GET /v3/serp/google/search_by_image/task_get/html/{id}",
+      "formatsVerified": [
+        "json",
+        "ai"
+      ],
+      "productionFreeRouteVerified": true,
+      "paidDefaultBlocked": false,
+      "nativeRoutingVerified": true,
+      "exactResponseRetrievalVerified": true
+    }
+  ]
+}

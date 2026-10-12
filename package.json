@@ -1,0 +1,63 @@
+{
+  "name": "openclaw-dataforseo",
+  "version": "0.1.0",
+  "description": "Native OpenClaw tools for the documented DataForSEO v3 API and bulk datasets",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "files": [
+    "src",
+    "data",
+    "scripts",
+    "skills",
+    "docs",
+    "eval",
+    "test",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "openclaw plugins build --entry ./src/index.js && node scripts/manifest.mjs",
+    "check": "openclaw plugins build --entry ./src/index.js --check && openclaw plugins validate --entry ./src/index.js",
+    "test": "node --test test/*.test.js",
+    "test:sandbox": "node scripts/sandbox-smoke.mjs",
+    "prepack": "npm test && npm run check"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.3",
+    "stream-chain": "^4.2.5",
+    "stream-json": "^3.7.0",
+    "typebox": "^1.1.38"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.10.1"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./src/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.10.1"
+    },
+    "build": {
+      "openclawVersion": "2026.10.1"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Broedkrummen/openclaw-dataforseo.git"
+  },
+  "homepage": "https://github.com/Broedkrummen/openclaw-dataforseo#readme",
+  "bugs": {
+    "url": "https://github.com/Broedkrummen/openclaw-dataforseo/issues"
+  }
+}

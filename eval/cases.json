@@ -1,0 +1,122 @@
+[
+  {
+    "id": "fresh-serp",
+    "prompt": "Get the current Google search results for albert einstein in the US, in English, and show the organic positions and any SERP features.",
+    "expectedEndpoint": "POST /v3/serp/google/organic/live/advanced",
+    "criteria": [
+      "Uses current Google SERP data, not stored competitor rankings",
+      "Inspects schema and sends market/language parameters",
+      "Reads actual items before describing positions",
+      "Keeps complete JSON; no cropped ai response"
+    ]
+  },
+  {
+    "id": "ads-volume",
+    "prompt": "Get Google Ads monthly search volumes and CPC for coffee beans and coffee grinder, US, English.",
+    "expectedEndpoint": "POST /v3/keywords_data/google_ads/search_volume/live",
+    "criteria": [
+      "Selects current Google Ads Keywords Data route",
+      "Preserves both keywords in a supported task payload",
+      "Reports month/source instead of claiming real-time search counts"
+    ]
+  },
+  {
+    "id": "competitor-keywords",
+    "prompt": "Find the Google keywords example.org ranks for in the US English dataset, and show the top ten with positions.",
+    "expectedEndpoint": "POST /v3/dataforseo_labs/google/ranked_keywords/live",
+    "criteria": [
+      "Uses stored ranked-keyword data from Labs",
+      "Reports the relevant update/freshness information",
+      "Retrieves records rather than inferring keywords from a summary"
+    ]
+  },
+  {
+    "id": "brand-mentions",
+    "prompt": "Find recorded ChatGPT mentions of example.org in the US English market and include the source context.",
+    "expectedEndpoint": "POST /v3/ai_optimization/llm_mentions/search_mentions/live",
+    "criteria": [
+      "Chooses current mentions route instead of legacy search/live",
+      "Checks schema to express the target and platform correctly",
+      "Distinguishes recorded mentions from a newly generated LLM answer"
+    ]
+  },
+  {
+    "id": "site-audit",
+    "prompt": "Crawl up to ten pages of example.org and report technical issues. It is fine to wait for completion.",
+    "expectedEndpoint": "POST /v3/on_page/task_post",
+    "criteria": [
+      "Starts one supported OnPage task",
+      "Uses the plugin's collection workflow",
+      "Does not interpret an in_progress summary as final results",
+      "Retains job ID if interrupted"
+    ]
+  },
+  {
+    "id": "backlink-summary",
+    "prompt": "Get the total backlinks and referring domains for example.org. I only need aggregate metrics.",
+    "expectedEndpoint": "POST /v3/backlinks/summary/live",
+    "criteria": [
+      "Chooses aggregate summary capability",
+      "Avoids collecting every individual link unnecessarily",
+      "Reads the actual aggregate result before answering"
+    ]
+  },
+  {
+    "id": "saved-results",
+    "prompt": "Use saved response RESULT_ID to show the first ten organic results. Do not run another search.",
+    "criteria": [
+      "Reads the saved response with an appropriate pointer",
+      "Makes no new paid request",
+      "Does not treat the saved summary as the result dataset"
+    ]
+  },
+  {
+    "id": "uncertain-post",
+    "prompt": "Job JOB_ID is submission-uncertain after a connection failure. Recover it without charging me twice.",
+    "criteria": [
+      "Inspects saved job state",
+      "Never repeats task_post",
+      "Uses free ID List if accepted provider IDs are unknown",
+      "Tracks recovered IDs before resuming"
+    ]
+  },
+  {
+    "id": "cap-zero",
+    "prompt": "The plugin daily cap is zero. Find what competitor-keyword data is available for example.org.",
+    "criteria": [
+      "Uses catalogue or existing saved data",
+      "Makes no paid API request or cap override",
+      "Explains what is available and what requires configured spending"
+    ]
+  },
+  {
+    "id": "full-large-export",
+    "prompt": "Export all original data from saved response RESULT_ID, including its large HTML field and exact numeric IDs.",
+    "criteria": [
+      "Uses raw byte pages or another exact export of the original bytes",
+      "Continues until nextByteOffset is null",
+      "Does not describe a single page as a complete export",
+      "Avoids integer rounding during reconstruction"
+    ]
+  },
+  {
+    "id": "database-file",
+    "prompt": "Read twenty records from my purchased Google keyword file /allowed/keywords.json.gz. Keep the original file where it is.",
+    "expectedDataset": "google/keywords",
+    "criteria": [
+      "References an operator file inside configured importRoots",
+      "Uses gzip-compatible JSON streaming",
+      "Returns the requested records and a continuation offset",
+      "Does not copy or delete the source file"
+    ]
+  },
+  {
+    "id": "ambiguous-market",
+    "prompt": "What is the search volume for coffee?",
+    "criteria": [
+      "Uses prior context for market and engine when available",
+      "Otherwise asks a concise question about materially missing market/source choices",
+      "Does not silently claim US data represents all markets"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+node_modules/
+*.tgz
+*.zip
+SHA256SUMS
+*.tmp
+.env
+.env.*
+credentials.env
+reports/
+sandbox-results/
