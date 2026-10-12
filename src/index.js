@@ -22,17 +22,11 @@ const limit = () =>
       description: "Maximum entries in this page, 1–100.",
     }),
   );
-const secret = () =>
-  Type.Optional(
-    Type.Union([
-      Type.String(),
-      Type.Object({
-        source: Type.String(),
-        provider: Type.String(),
-        id: Type.String(),
-      }),
-    ]),
-  );
+// OpenClaw's config UI recognizes secret inputs from the manifest contract and
+// the sensitive UI hint. Keeping this as a string gives it a masked password
+// field; a string/object union is rendered as a JSON editor.
+const secret = (description) =>
+  Type.Optional(Type.String({ description }));
 const resultParameters = {
   id: text(
     "Saved response or import ID; required for read, delete, or detach.",
@@ -81,10 +75,10 @@ export default defineToolPlugin({
     "Search the complete DataForSEO catalogue, load fields on demand, run APIs, resume tasks, and read complete saved results and purchased databases.",
   configSchema: Type.Object(
     {
-      login: secret(),
-      password: secret(),
-      passwordBase64: secret(),
-      authBase64: secret(),
+      login: secret("DataForSEO API login."),
+      password: secret("DataForSEO API password."),
+      passwordBase64: secret("Base64-encoded DataForSEO API password."),
+      authBase64: secret("Base64-encoded login:password pair."),
       dailyCapUsd: Type.Optional(
         Type.Number({
           minimum: 0,

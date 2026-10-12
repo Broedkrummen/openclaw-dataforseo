@@ -44,8 +44,13 @@ test("native OpenClaw registration exposes seven tools and exercises catalogue, 
     ["login", "password", "passwordBase64", "authBase64"],
   );
   assert.equal(manifest.uiHints.password.sensitive, true);
+  assert.equal(manifest.uiHints.login.sensitive, true);
   assert.equal(manifest.uiHints.passwordBase64.sensitive, true);
   assert.equal(manifest.uiHints.authBase64.sensitive, true);
+  for (const field of ["login", "password", "passwordBase64", "authBase64"]) {
+    assert.equal(manifest.configSchema.properties[field].type, "string");
+    assert.equal(manifest.configSchema.properties[field].anyOf, undefined);
+  }
   assert.deepEqual(manifest.skills, ["./skills"]);
   const skill = await readFile(
     new URL("../skills/dataforseo/SKILL.md", import.meta.url),

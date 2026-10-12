@@ -1,6 +1,6 @@
 {
   "name": "openclaw-dataforseo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Native OpenClaw tools for DataForSEO search, keyword research, backlinks, site audits and bulk datasets",
   "type": "module",
   "license": "MIT",

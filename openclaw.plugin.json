@@ -2,113 +2,25 @@
   "id": "dataforseo",
   "name": "DataForSEO",
   "description": "Search the complete DataForSEO catalogue, load fields on demand, run APIs, resume tasks, and read complete saved results and purchased databases.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "configSchema": {
     "type": "object",
     "properties": {
       "login": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "object",
-            "required": [
-              "source",
-              "provider",
-              "id"
-            ],
-            "properties": {
-              "source": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "id": {
-                "type": "string"
-              }
-            }
-          }
-        ]
+        "type": "string",
+        "description": "DataForSEO API login."
       },
       "password": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "object",
-            "required": [
-              "source",
-              "provider",
-              "id"
-            ],
-            "properties": {
-              "source": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "id": {
-                "type": "string"
-              }
-            }
-          }
-        ]
+        "type": "string",
+        "description": "DataForSEO API password."
       },
       "passwordBase64": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "object",
-            "required": [
-              "source",
-              "provider",
-              "id"
-            ],
-            "properties": {
-              "source": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "id": {
-                "type": "string"
-              }
-            }
-          }
-        ]
+        "type": "string",
+        "description": "Base64-encoded DataForSEO API password."
       },
       "authBase64": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "object",
-            "required": [
-              "source",
-              "provider",
-              "id"
-            ],
-            "properties": {
-              "source": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "id": {
-                "type": "string"
-              }
-            }
-          }
-        ]
+        "type": "string",
+        "description": "Base64-encoded login:password pair."
       },
       "dailyCapUsd": {
         "type": "number",

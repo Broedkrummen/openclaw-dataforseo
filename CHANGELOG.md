@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+Render API login and password formats as ordinary masked credential fields in OpenClaw setup. Keep host-managed secret references supported through the manifest secret-input contract.
+
 ## 0.1.1
 
 Clarify the public package description without the provider's internal API-version label. Update installation examples for the latest ClawHub release and OpenClaw capability consent.
