@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+Clarify the public package description without the provider's internal API-version label. Update installation examples for the latest ClawHub release and OpenClaw capability consent.
+
 ## 0.1.0
 
 Initial public package: versioned DataForSEO catalogue and nested schemas, seven native OpenClaw tools, account-wide daily spending checks, complete saved responses, automatic resumable tasks, and referenced database imports.

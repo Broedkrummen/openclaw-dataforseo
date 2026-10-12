@@ -1,6 +1,6 @@
 # OpenClaw DataForSEO
 
-Native OpenClaw tools for DataForSEO v3. Agents search a versioned catalogue, load endpoint fields on demand, send complete request bodies, and retrieve every field from saved responses.
+Native OpenClaw tools for DataForSEO search, keyword research, backlinks, site audits and bulk datasets. Agents search a versioned catalogue, load endpoint fields on demand, send complete request bodies, and retrieve every field from saved responses.
 
 The initial catalogue was collected with Firecrawl on 12 October 2026. Coverage includes all **608 menu URLs**, all **618 URLs from the supplementary LLM index**, **623 API operations**, **2,648 nested OpenAPI definitions**, and **16 bulk database datasets**. It preserves 46,792 field-table rows across the documentation snapshot. The menu pages and LLM index were collected separately; the index supplemented the menu crawl. Eight HTML links in the index returned 404, but their Markdown versions were successfully collected.
 
@@ -13,13 +13,13 @@ Requires Node.js 24.16 or later and OpenClaw 2026.10.1 or later. An MIT-licensed
 Install the public package using OpenClaw's plugin installer:
 
 ```sh
-openclaw plugins install clawhub:openclaw-dataforseo@0.1.0
+openclaw plugins install clawhub:openclaw-dataforseo@0.1.1 --accept-capabilities
 ```
 
 For a downloaded release archive:
 
 ```sh
-openclaw plugins install ./openclaw-dataforseo-0.1.0.tgz
+openclaw plugins install ./openclaw-dataforseo-0.1.1.tgz --accept-capabilities
 ```
 
 Make your API credentials available to the OpenClaw process using one of these formats:
