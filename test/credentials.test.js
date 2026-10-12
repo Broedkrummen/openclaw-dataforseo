@@ -55,7 +55,7 @@ test("environment Base64 modes work and an explicit config mode overrides enviro
   delete process.env.DATAFORSEO_PASSWORD_BASE64;
   process.env.DATAFORSEO_AUTH_BASE64 = encode(login + ":" + password);
   assert.deepEqual(new Client().credentials(), { login, password });
-  process.env.DATAFORSEO_PASSWORD = "stale-environment-password";
+  process.env.DATAFORSEO_PASSWORD = fixtureSecret();
   assert.deepEqual(new Client({ login, passwordBase64: encode(password) }).credentials(), { login, password });
   assert.throws(() => new Client().credentials(), /Choose only one/);
   assert.throws(() => new Client({ login, password, passwordBase64: encode(password) }).credentials(), /Choose only one/);

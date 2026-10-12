@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+Remove the remaining hardcoded dummy password from credential tests so static release scans do not flag test data.
+
 ## 0.1.3
 
 Generate dummy test credentials at runtime to avoid static secret-scanner false positives.
