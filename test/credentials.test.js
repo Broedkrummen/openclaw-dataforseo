@@ -4,9 +4,10 @@ import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { Client } from "../src/client.js";
+import { fixtureSecret } from "./fixtures.js";
 
 const login = "fixture@example.test";
-const password = "páss:word/with+symbols=";
+const password = fixtureSecret();
 const encode = (value) => Buffer.from(value, "utf8").toString("base64");
 const envKeys = [
   "DATAFORSEO_LOGIN",

@@ -4,6 +4,7 @@ import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { Client } from "../src/client.js";
+import { fixtureSecret } from "./fixtures.js";
 
 const ACCOUNT = { method: "GET", path: "/v3/appendix/user_data" };
 const LIVE = "POST /v3/serp/google/organic/live/advanced";
@@ -29,7 +30,7 @@ async function fixture(t) {
       now += ms;
     },
   };
-  return { config: { login: "fixture-user", password: "fixture-password", dataDirectory: root, dailyCapUsd: 1 }, clock, waits };
+  return { config: { login: "fixture-user", password: fixtureSecret(), dataDirectory: root, dailyCapUsd: 1 }, clock, waits };
 }
 
 test("twelve concurrent account reads share six-per-minute pacing across clients and credential formats", async (t) => {

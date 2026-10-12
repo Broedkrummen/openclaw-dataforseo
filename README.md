@@ -13,13 +13,13 @@ Requires Node.js 24.16 or later and OpenClaw 2026.10.1 or later. An MIT-licensed
 Install the public package using OpenClaw's plugin installer:
 
 ```sh
-openclaw plugins install clawhub:openclaw-dataforseo@0.1.2 --accept-capabilities
+openclaw plugins install clawhub:openclaw-dataforseo@0.1.3 --accept-capabilities
 ```
 
 For a downloaded release archive:
 
 ```sh
-openclaw plugins install ./openclaw-dataforseo-0.1.2.tgz --accept-capabilities
+openclaw plugins install ./openclaw-dataforseo-0.1.3.tgz --accept-capabilities
 ```
 
 Make your API credentials available to the OpenClaw process using one of these formats:

@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { gzipSync } from "node:zlib";
 import { Client, spendingTotal } from "../src/client.js";
+import { fixtureSecret } from "./fixtures.js";
 import { Store } from "../src/storage.js";
 import { Imports } from "../src/imports.js";
 import { catalogue, discover, inspect } from "../src/catalogue.js";
@@ -46,7 +47,7 @@ async function fixture(t) {
     directory,
     config: {
       login: "fixture-login",
-      password: "fixture-password",
+      password: fixtureSecret(),
       dataDirectory: join(directory, "state"),
       dailyCapUsd: 1,
       requestTimeoutMs: 1000,

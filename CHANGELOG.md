@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+Generate dummy test credentials at runtime to avoid static secret-scanner false positives.
+
 ## 0.1.2
 
 Render API login and password formats as ordinary masked credential fields in OpenClaw setup. Keep host-managed secret references supported through the manifest secret-input contract.
